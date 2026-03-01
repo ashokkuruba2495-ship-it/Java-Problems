@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.next();
+        boolean onlyDigits = true;
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            if (ch < '0' || ch > '9') {
+                onlyDigits = false;
+                break;
+            }
+        }
+
+        if (onlyDigits)
+            System.out.println("Yes");
+        else
+            System.out.println("No");
+    }
+}
